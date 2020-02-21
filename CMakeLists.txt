@@ -1,5 +1,5 @@
 ## This is a CMake file, part of Unidata's netCDF Fortran package.
-# Copyright 2012-2014, see the COPYRIGHT file for more information.
+# Copyright 2012-2020, see the COPYRIGHT file for more information.
 
 ##################################
 # Set Project Properties
