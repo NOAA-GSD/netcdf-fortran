@@ -186,5 +186,9 @@ endif
 EXTRA_DIST = $(COMMON_CODES) $(NETCDF4_CODES) $(NETCDF3_CODES) CMakeLists.txt	\
 netcdf2.inc netcdf3.inc netcdf4.inc
 
-CLEANFILES = *.mod netcdf.inc
+# According to the automake docs, if make built it, it should be
+# MOSTLYCLEANFILES.
+MOSTLYCLEANFILES = *.mod
+
+CLEANFILES = netcdf.inc
 
