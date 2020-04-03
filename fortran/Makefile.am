@@ -152,7 +152,7 @@ endif # USE_NETCDF4
 MODFILES += netcdf.mod
 
 # Mod files are build sources.
-BUILT_SOURCES = $(MODFILES)
+#BUILT_SOURCES = $(MODFILES)
 
 # Mod files are installed, but not distrubuted.
 nodist_fmod_DATA = $(MODFILES)
