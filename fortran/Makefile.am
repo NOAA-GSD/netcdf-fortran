@@ -159,7 +159,6 @@ nodist_fmod_DATA = $(MODFILES)
 
 # The netcdf.inc file is built on the user machine, and installed as
 # a header.
-BUILT_SOURCES += netcdf.inc
 nodist_include_HEADERS = netcdf.inc
 
 # Build netcdf.inc file from netcdf2, netcdf3 and netcdf4 files
