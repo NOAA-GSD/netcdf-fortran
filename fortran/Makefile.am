@@ -1,7 +1,7 @@
 ## This is an automake file, part of Unidata's netCDF package.
 # Copyright 2005-2006, see the COPYRIGHT file for more information.
 
-# This file controls the building of the fortran 90 API.
+# This file controls the building of the fortran 77 and 90 APIs.
 
 # Ed Hartnett, Russ Rew, Dennis Heimbigner, Ward Fisher
 
@@ -151,15 +151,11 @@ endif # USE_NETCDF4
 # This must come last in the list of MODFILES.
 MODFILES += netcdf.mod
 
-# Mod files are build sources.
-BUILT_SOURCES = $(MODFILES)
-
 # Mod files are installed, but not distrubuted.
 nodist_fmod_DATA = $(MODFILES)
 
 # The netcdf.inc file is built on the user machine, and installed as
 # a header.
-BUILT_SOURCES += netcdf.inc
 nodist_include_HEADERS = netcdf.inc
 
 # Build netcdf.inc file from netcdf2, netcdf3 and netcdf4 files
@@ -186,5 +182,8 @@ endif
 EXTRA_DIST = $(COMMON_CODES) $(NETCDF4_CODES) $(NETCDF3_CODES) CMakeLists.txt	\
 netcdf2.inc netcdf3.inc netcdf4.inc
 
-CLEANFILES = *.mod netcdf.inc
+# Per the automake manual, .mod files should be mostlycleanfiles.
+MOSTLYCLEANFILES = *.mod
+
+CLEANFILES = netcdf.inc
 
