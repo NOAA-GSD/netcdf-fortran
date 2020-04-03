@@ -117,7 +117,7 @@ if USE_NETCDF4
 
 # Add additional source files to the library to support netCDF4.
 libnetcdff_la_SOURCES += nf_lib.c nf_nc4.f90
-nf_nc4.$(OBJEXT): netcdf4_nc_interfaces.mod
+nf_nc4.lo: netcdf4_nc_interfaces.mod
 
 # Add these uninstalled convenience libraries for netcdf-4.
 noinst_LTLIBRARIES += libnetcdf4_nc_interfaces.la	\
